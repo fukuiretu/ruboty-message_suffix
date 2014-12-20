@@ -1,6 +1,28 @@
-# Ruboty::MessageSuffix
+Ruboty::MessageSuffix
+==========
 
-TODO: Write a gem description
+## Overview
+This Extension is for [Ruboty](https://github.com/r7kamura/ruboty).
+
+Grant any word to suffix of message.
+
+
+
+## Usage
+
+```bash
+export RUBOTY_MESSAGE_SUFFIX='どすぅ'
+bundle exec ruboty
+> ruboty ping
+pong どすぅ
+
+```
+
+## Demo
+
+Coming soon...
+
+
 
 ## Installation
 
@@ -12,20 +34,13 @@ gem 'ruboty-message_suffix'
 
 And then execute:
 
-    $ bundle
+$ bundle
 
 Or install it yourself as:
 
-    $ gem install ruboty-message_suffix
+$ gem install ruboty-message_suffix
 
-## Usage
 
-TODO: Write usage instructions here
 
-## Contributing
-
-1. Fork it ( https://github.com/[my-github-username]/ruboty-message_suffix/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+### TODO
+* spec

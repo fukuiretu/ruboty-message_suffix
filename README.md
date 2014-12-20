@@ -11,7 +11,7 @@ Grant any word to suffix of message.
 ## Usage
 
 ```bash
-export RUBOTY_MESSAGE_SUFFIX='どすぅ'
+export RUBOT_MESSAGE_SUFFIX='どすぅ'
 bundle exec ruboty
 > ruboty ping
 pong どすぅ

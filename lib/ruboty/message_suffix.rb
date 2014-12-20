@@ -3,9 +3,9 @@ require "ruboty/message_suffix/version"
 
 module ExtensionMessage
   def message_suffix_reply(body, options = {})
-    raise "Please set the value to the ENV variable 'RUBOTY_MESSAGE_SUFFIX'" unless ENV.has_key?("RUBOTY_MESSAGE_SUFFIX")
+    raise "Please set the value to the ENV variable 'RUBOT_MESSAGE_SUFFIX'" unless ENV.has_key?("RUBOT_MESSAGE_SUFFIX")
 
-    attributes = { body: body << " " << ENV["RUBOTY_MESSAGE_SUFFIX"], from: to, to: from, original: original }.merge(options)
+    attributes = { body: body << " " << ENV["RUBOT_MESSAGE_SUFFIX"], from: to, to: from, original: original }.merge(options)
     robot.say(attributes)
   end
 end

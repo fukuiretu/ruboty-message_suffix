@@ -10,12 +10,25 @@ Grant any word to suffix of message.
 
 ## Usage
 
+### Basic
 ```bash
-export RUBOT_MESSAGE_SUFFIX='どすぅ'
-bundle exec ruboty
+$ export RUBOT_MESSAGE_SUFFIX='どすぅ'
+$ bundle exec ruboty
 > ruboty ping
 pong どすぅ
 
+```
+
+### Randomly extracted from multiple
+```bash
+$ export RUBOT_MESSAGE_SUFFIX='っしょ,じゃけぇ,ばってん'
+$ bundle exec ruboty
+> ruboty ping
+pong じゃけぇ
+> ruboty ping
+pong っしょ
+> ruboty ping
+pong ばってん
 ```
 
 ## Demo

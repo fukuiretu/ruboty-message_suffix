@@ -5,8 +5,12 @@ module ExtensionMessage
   def message_suffix_reply(body, options = {})
     raise "Please set the value to the ENV variable 'RUBOT_MESSAGE_SUFFIX'" unless ENV.has_key?("RUBOT_MESSAGE_SUFFIX")
 
-    attributes = { body: body << " " << ENV["RUBOT_MESSAGE_SUFFIX"], from: to, to: from, original: original }.merge(options)
-    robot.say(attributes)
+    unless body.nil?
+      suffixes = ENV["RUBOT_MESSAGE_SUFFIX"].split(",")
+      body << " " << suffixes[Random.new.rand(suffixes.size)]
+    end
+
+    original_reply(body, options)
   end
 end
 
